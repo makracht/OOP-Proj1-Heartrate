@@ -1,25 +1,92 @@
-public static void main(String[] args){
-    
-    System.out.println("This program is designed to take given data about an individual then calculate and reatain the data");
-    System.out.println("Would you like to add a person to database?");
-    Scanner scan = Scanner.getScane();
-    if(Scanner.nextLine().equalsIgnoreCase("Yes");{
-      
-    }
-    else if(Scanner.nextLine().equalsIgnoreCase("No");{
-      
-    }
+import java.io.File;
+import java.util.Scanner;
+public class Main {
+	public static Scanner scan;
+	public static File heartRateFile = new File ("heartRateFile");
+	public static void main(String[] args){
+	    System.out.println("This program is designed to take given data about an individual then calculate and reatain the data");
+	    System.out.println("Would you like to add a person to database?");
+	    scan = new Scanner(System.in);
+	    String answer = validInputYN();
+	    if(answer.equalsIgnoreCase("yes")) {
+	    	
+	    	
+	    }
+	    if(answer.equalsIgnoreCase("no")) {
+	    	
+	    }
+	    scan.close();
+	}
+	public static String validInputYN() {
+		boolean validInput = false;
+		String response = scan.next();
+		while(validInput == false){
+			if(response.equalsIgnoreCase("Yes")) {
+				response = "Yes";
+				validInput = true;
+			}
+			else if(response.equalsIgnoreCase("No")) {
+				response = "No";
+				validInput = true;
+			}
+			else {
+				System.out.println("That is an invalid input. Please respond with 'Yes' or 'No'");
+				scan.nextLine();
+				response = scan.next();
+			}
+		}
+		return response;
+	}
 }
 
-public Scanner(){
-  Scanner scan;
-    public void createScan(){
-      scan = new Scanner(System.in);
-  }
-    public Scanner getScan(){
-    return scan;
-  }
-    public void closeScanner(){
-    scan.close();  
-  }
+
+
+
+
+package proj1;
+
+public class PersonHeartRate {
+	private String firstName;
+	private String lastName;
+	private String DOB;
+	
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public void setDOB(String date) {
+		this.DOB = date;
+	}
+	public String firstName(PersonHeartRate person) {
+		return person.firstName;
+	}
+	public String lastName(PersonHeartRate person) {
+		return person.lastName;
+	}
+	public String DOB(PersonHeartRate person) {
+		return person.DOB;
+	}
+	
 }
+
+
+
+
+
+package proj1;
+
+public class DateOfBirth {
+	int day;
+	int month;
+	int year;
+	
+	public void setDOB() {
+		DateOfBirth DOB = new DateOfBirth();
+		System.out.println("What is their birthday mm/dd/yyyy");
+		String DOB = scan.nextLine();
+		String temp = ()
+	}
+}
+
