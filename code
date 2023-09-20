@@ -1,0 +1,25 @@
+public static void main(String[] args){
+    
+    System.out.println("This program is designed to take given data about an individual then calculate and reatain the data");
+    System.out.println("Would you like to add a person to database?");
+    Scanner scan = Scanner.getScane();
+    if(Scanner.nextLine().equalsIgnoreCase("Yes");{
+      
+    }
+    else if(Scanner.nextLine().equalsIgnoreCase("No");{
+      
+    }
+}
+
+public Scanner(){
+  Scanner scan;
+    public void createScan(){
+      scan = new Scanner(System.in);
+  }
+    public Scanner getScan(){
+    return scan;
+  }
+    public void closeScanner(){
+    scan.close();  
+  }
+}
